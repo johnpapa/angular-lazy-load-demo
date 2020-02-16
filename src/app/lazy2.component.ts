@@ -1,25 +1,20 @@
 import {
   Component,
   ViewContainerRef,
-  ComponentFactoryResolver
+  ComponentFactoryResolver,
+  OnInit
   // ViewChild
-} from "@angular/core";
-import { Lazy2aComponent } from "./lazy2a.component";
-import { Lazy2bComponent } from "./lazy2b.component";
+} from '@angular/core';
+import { Lazy2aComponent } from './lazy2a.component';
+import { Lazy2bComponent } from './lazy2b.component';
 
 @Component({
   template: `
-    <div>
-      <p>
-        lazy2 component
-      </p>
-      <button (click)="getChild('a')">Child A</button>
-      <button (click)="getChild('b')">Child B</button>
-      <!-- template #childContainer></template -->
-    </div>
+    <p>lazy2 component</p>
+    <!-- template #childContainer></template -->
   `
 })
-export class Lazy2Component {
+export class Lazy2Component implements OnInit {
   // @ViewChild("childContainer", { read: ViewContainerRef }) container;
 
   constructor(
@@ -27,14 +22,11 @@ export class Lazy2Component {
     private cfr: ComponentFactoryResolver
   ) {}
 
-  getChild(whichChild: "a" | "b") {
-    const child = whichChild === "a" ? Lazy2aComponent : Lazy2bComponent;
-    const componentFactory = this.cfr.resolveComponentFactory(child);
+  ngOnInit() {
+    const componentFactorya = this.cfr.resolveComponentFactory(Lazy2aComponent);
+    const componentFactoryb = this.cfr.resolveComponentFactory(Lazy2bComponent);
     this.viewContainerRef.clear();
-    // this.container.clear();
-    // const componentRef = this.container.createComponent(
-    const componentRef = this.viewContainerRef.createComponent(
-      componentFactory
-    );
+    this.viewContainerRef.createComponent(componentFactorya);
+    this.viewContainerRef.createComponent(componentFactoryb);
   }
 }
