@@ -13,6 +13,8 @@ Angular 9 is required.
 1. Run `ng serve` for a dev server.
 1. Navigate to `http://localhost:4200/`
 
+![lazy load](./lazy.gif)
+
 ## Learn More
 
 These examples should be able to help you get started with lazy loading components dynamically, with or without children. If you want to learn more, check out these resources:
