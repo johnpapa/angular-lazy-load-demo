@@ -21,7 +21,7 @@ These examples should be able to help you get started with lazy loading componen
 
 1. [Dynamic Component Loader](https://angular.io/guide/dynamic-component-loader)
 1. [7 new features in Angular 9](https://auth0.com/blog/angular-9-whats-new/).
-1. [VS Code](https://code.visualstudio.com/?wt.mc_id=angular_lazy_load_demo-github-jopapa) editor
-1. [Angular Essentials Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials&wt.mc_id=angular_lazy_load_demo-github-jopapa) for VS Code
-1. [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template&wt.mc_id=angular_lazy_load_demo-github-jopapa) for VS Code
+1. [VS Code](https://code.visualstudio.com/?WT.mc_id=javascript-0000-jopapa) editor
+1. [Angular Essentials Extension](https://marketplace.visualstudio.com/items?itemName=johnpapa.angular-essentials&WT.mc_id=javascript-0000-jopapa) for VS Code
+1. [Angular Language Service](https://marketplace.visualstudio.com/items?itemName=Angular.ng-template&WT.mc_id=javascript-0000-jopapa) for VS Code
 1. [Angular Lazy Load Demo source code](https://github.com/johnpapa/angular-lazy-load-demo)
